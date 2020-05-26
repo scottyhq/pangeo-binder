@@ -47,7 +47,7 @@ nodeGroups:
     volumeSize: 100
     volumeType: gp2
     labels:
-      node-role.kubernetes.io/core: core
+      role: core
       hub.jupyter.org/node-purpose: core
     instancesDistribution:
       instanceTypes:
@@ -79,7 +79,7 @@ nodeGroups:
     volumeSize: 100
     volumeType: gp2
     labels:
-      node-role.kubernetes.io/user: user
+      role: user
       hub.jupyter.org/node-purpose: user
     taints:
       hub.jupyter.org/dedicated: 'user:NoSchedule'
@@ -112,7 +112,7 @@ nodeGroups:
     volumeSize: 100
     volumeType: gp2
     labels:
-      node-role.kubernetes.io/worker: worker
+      role: worker
       k8s.dask.org/node-purpose: worker
     taints:
       k8s.dask.org/dedicated: 'worker:NoSchedule'
@@ -144,7 +144,7 @@ nodeGroups:
     volumeSize: 100
     volumeType: gp2
     labels:
-      node-role.kubernetes.io/scheduler: scheduler
+      role: scheduler
       k8s.dask.org/node-purpose: scheduler
     taints:
       k8s.dask.org/dedicated: 'scheduler:NoSchedule'
